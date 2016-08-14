@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour {
 
         if (Input.GetMouseButton(0))
         {
-            if(Input.mousePosition.x - startPoint > threshold)
+            if(startPoint - Input.mousePosition.x > threshold)
             {
                 Vector3 forward2D = new Vector3(transform.forward.x, 0, transform.forward.z).normalized;
                 transform.position += forward2D * Time.deltaTime;
